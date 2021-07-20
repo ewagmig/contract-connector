@@ -5,8 +5,8 @@ import (
 
 	"github.com/op/go-logging"
 
-	mdb "github.com/ewagmig/rewards-collection/common/db"
-	"github.com/ewagmig/rewards-collection/server"
+	mdb "github.com/ewagmig/contract-connector/common/db"
+	"github.com/ewagmig/contract-connector/server"
 	"github.com/spf13/cast"
 )
 

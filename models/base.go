@@ -2,7 +2,7 @@ package models
 
 import (
 	"context"
-	mdb "github.com/ewagmig/rewards-collection/common/db"
+	mdb "github.com/ewagmig/contract-connector/common/db"
 	"github.com/jinzhu/gorm"
 	"time"
 )

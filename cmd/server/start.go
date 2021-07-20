@@ -1,9 +1,9 @@
 package server
 
 import (
-	"github.com/ewagmig/rewards-collection/server"
-	"github.com/ewagmig/rewards-collection/utils"
-	"github.com/ewagmig/rewards-collection/version"
+	"github.com/ewagmig/contract-connector/server"
+	"github.com/ewagmig/contract-connector/utils"
+	"github.com/ewagmig/contract-connector/version"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 	"os"

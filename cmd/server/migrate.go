@@ -1,9 +1,9 @@
 package server
 
 import (
-	_ "github.com/ewagmig/rewards-collection/migration/source"
-	"github.com/ewagmig/rewards-collection/server"
-	"github.com/ewagmig/rewards-collection/version"
+	_ "github.com/ewagmig/contract-connector/migration/source"
+	"github.com/ewagmig/contract-connector/server"
+	"github.com/ewagmig/contract-connector/version"
 	"github.com/spf13/cobra"
 )
 

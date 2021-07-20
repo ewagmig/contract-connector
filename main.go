@@ -2,13 +2,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/awnumar/memguard"
-	cmdsvr "github.com/ewagmig/rewards-collection/cmd/server"
-	"github.com/ewagmig/rewards-collection/version"
+	cmdsvr "github.com/ewagmig/contract-connector/cmd/server"
+	"github.com/ewagmig/contract-connector/version"
 	"github.com/op/go-logging"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
-	"log"
 	"os"
 	"strings"
 )
@@ -51,15 +49,15 @@ func init() {
 
 func main() {
 	// MemGuard
-	memguard.DisableUnixCoreDumps()
-	// Tell memguard to listen out for interrupts, and cleanup in case of one.
-	memguard.CatchInterrupt(func() {
-		log.Println("MemGuard Interrupt")
-		log.Println("Interrupt signal received. Exiting...")
-	})
-
-	// Make sure to destroy all LockedBuffers when returning.
-	defer memguard.DestroyAll()
+	//memguard.DisableUnixCoreDumps()
+	//// Tell memguard to listen out for interrupts, and cleanup in case of one.
+	//memguard.CatchInterrupt(func() {
+	//	log.Println("MemGuard Interrupt")
+	//	log.Println("Interrupt signal received. Exiting...")
+	//})
+	//
+	//// Make sure to destroy all LockedBuffers when returning.
+	//defer memguard.DestroyAll()
 
 	mainCmd.AddCommand(cmdsvr.Cmd())
 

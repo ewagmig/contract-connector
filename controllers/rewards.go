@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"github.com/ewagmig/rewards-collection/server"
+	"github.com/ewagmig/contract-connector/server"
 	"github.com/op/go-logging"
 )
 

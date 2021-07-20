@@ -1,7 +1,8 @@
 package models
 
 import (
-	"github.com/ewagmig/rewards-collection/errors"
+	"errors"
+	"github.com/sirupsen/logrus"
 	"github.com/ybbus/jsonrpc"
 )
 
@@ -23,12 +24,13 @@ func callContract(ContractAddr, archNode string) (string, error)  {
 		"data": dataOb,
 	})
 	if err != nil {
-		return "",errors.BadRequestError(errors.EthCallError, err)
+		logrus.Errorf("eth call error with %v", err)
+		return "",errors.New("eth call error")
 	}
 
 	result, err := resp.GetString()
 	if err != nil {
-		return "",errors.BadRequestError(errors.EthCallError, err)
+		return "",errors.New("eth call error")
 	}
 	return result, nil
 }

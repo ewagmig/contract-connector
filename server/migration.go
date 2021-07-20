@@ -4,7 +4,7 @@ import (
 	"sort"
 	"time"
 
-	mdb "github.com/ewagmig/rewards-collection/common/db"
+	mdb "github.com/ewagmig/contract-connector/common/db"
 )
 
 // Migrater represents a migration operation.
